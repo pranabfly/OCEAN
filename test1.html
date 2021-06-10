@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>OCEAN Corporation - Artist Details</title>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    #div1, #div2 {
+    float: left;
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    }
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+<body >
+
+<h2>Drag and Drop</h2>
+
+
+<h1 style="background-color:DodgerBlue;">O C E A N</h1>
+
+<p style="background-color:Tomato;">Hi, welcome to ocean.</p>
+<b>TOP 5 choice music</b>
+
+<p>
+    <i>Sia - Chandelier</i>
+    <audio controls>
+    <source src="Sia - CHANDELIER.mp3" type="audio/mpeg">
+
+</audio>
+</p>
+<i>Shakira - Try everything</i>
+<audio controls>
+    <source src="Shakira - Try Everything (From Zootopia ) [Official Music Video].mp3" type="audio/mpeg">
+
+</audio>
+
+<p>
+    <i> Taylor Swift - You need to calm down </i>
+    <audio controls>
+        <source src="Taylor Swift - You Need To Calm Down.mp3" type="audio/mpeg">
+
+    </audio>
+</p>
+
+<form>
+    <p>
+        <b>Please enter your name to be displayed (Type '-' if you don't want to enter full name)</b>
+    </p>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname">
+
+    <p>
+       <p>
+          <b>Please enter your gender</b>
+       </p>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label>
+    </p>
+        <p>
+           <b> Please select the type of release you'll like to distribute</b>
+        </p>
+
+    <input type="checkbox" id="Artist Channel" name="Artist" value="Bike">
+    <label for="vehicle1"> Release a single</label><br>
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+    <label for="vehicle2"> Release an album</label><br>
+    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+    <label for="vehicle3"> Release one song</label>
+
+    <p>
+       <p>
+          <b>Enter your Interscope provided Username & Password</b>
+       </p>
+     <label for="username">Username:</label><br>
+     <input type="text" id="username" name="username"><br>
+     <label for="pwd">Password:</label><br>
+     <input type="password" id="pwd" name="pwd">
+    </p>
+
+    <p>
+        <b>Please select the Record Label you'll like to get into</b>
+    </p>
+    <input type="checkbox" id="label" name="Record label"><br>
+    <label for="record1">Darkroom/Interscope Records:</label><br>
+    <input type="checkbox" id="label" name="Record label"><br>
+    <label for="record2">republic Records:</label><br>
+    <input type="checkbox" id="label" name="Record label"><br>
+    <label for="record3">XL Records:</label><br>
+    <input type="checkbox" id="label" name="Record label"><br>
+    <label for="record4">RCA Records:</label><br>
+    <input type="checkbox" id="label" name="Record label"><br>
+    <label for="record5">Walt Disney Records:</label><br>
+    <input type="checkbox" id="label" name="Record label"><br>
+    <label for="record6">Big Machine Records:</label><br>
+    <input type="checkbox" id="label" name="Record label"><br>
+    <label for="record7">Capitol Records:</label><br>
+    <input type="checkbox" id="label" name="Record label"><br>
+    <label for="record6">Atlantic Records:</label><br>
+    <input type="checkbox" id="label" name="Record label"><br>
+    <label for="record7">GEFFEN Records:</label><br>
+    <input type="checkbox" id="label" name="Record label"><br>
+    <label for="record8">Legacy Records:</label><br>
+    <input type="checkbox" id="label" name="Record label"><br>
+    <label for="record9">International Records:</label><br>
+    <input type="checkbox" id="label" name="Record label"><br>
+
+    <p>
+        <b> Wanna distribute even faster? Select the ventures and owners of the record labels</b>
+    </p>
+    <p>
+        <label for="record1">Universal Music Group:</label><br>
+        <input type="checkbox" id="label" name="Record label"><br>
+        <label for="record2">Sony Music Universal:</label><br>
+        <input type="checkbox" id="label" name="Record label"><br>
+        <label for="record1">Warner Bros. Music: Records:</label><br>
+        <input type="checkbox" id="label" name="Record label"><br>
+    </p>
+
+    <p>
+        <b> Choose your distributor</b>
+    </p>
+    <p>
+        <label for="record1">Ditto Music:</label><br>
+        <input type="checkbox" id="label" name="Record label"><br>
+        <label for="record2">EMPIRE power records:</label><br>
+        <input type="checkbox" id="label" name="Record label"><br>
+    </p>
+
+    <p>
+        <b>Which one of the following you'll like to make your videos and confirm them?</b>
+    </p>
+
+    <p>
+        <label for="record1">vevo:</label><br>
+        <input type="checkbox" id="label" name="Record label"><br>
+        <label for="record2">itv:</label><br>
+        <input type="checkbox" id="label" name="Record label"><br>
+        <label for="record3">NBC Records:</label><br>
+        <input type="checkbox" id="label" name="Record label"><br>
+    </p>
+
+    <p>Drag the image back and forth between the two div elements to confirm your order.</p>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="confirm_.jpeg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+    </div>
+
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</form>
+
+</body>
+</html>
